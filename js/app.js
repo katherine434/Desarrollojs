@@ -1,12 +1,3 @@
-/*
-1
-Desarrolla la funcionalidad de la calculadora utilizando el patrón módulo, es decir que todo el código debe estar englobado en un objeto llamado Calculadora. Utiliza un método de inicialización que se encargue de ejecutar todas las otras funciones que se deben iniciar con la ejecución del programa.
-
-
-2 Crea los métodos que consideres necesarios para hacer que la tecla presionada reduzca su tamaño y vuelva a su forma original al soltarla
-*/
-
-
 
 var Calculadora = function () {
 
@@ -24,34 +15,64 @@ var Calculadora = function () {
 
 
 	uno.addEventListener('click', function(){
-		display.textContent = display.textContent + '1' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '1' ;	
+		}else{display.textContent = display.textContent + '1' ;}
 	})
 	dos.addEventListener('click', function(){
-		display.textContent = display.textContent + '2' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '2' ;	
+		}else{display.textContent = display.textContent + '2' ;}
 	})
 	tres.addEventListener('click', function(){
-		display.textContent = display.textContent + '3' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '3' ;	
+		}else{display.textContent = display.textContent + '3' ;}
 	})
 	cuatro.addEventListener('click', function(){
-		display.textContent = display.textContent + '4' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '4' ;	
+		}else{display.textContent = display.textContent + '4' ;}
 	})
 	cinco.addEventListener('click', function(){
-		display.textContent = display.textContent + '5' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '5' ;	
+		}else{display.textContent = display.textContent + '5' ;}
 	})
 	seis.addEventListener('click', function(){
-		display.textContent = display.textContent + '6' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '6' ;	
+		}else{display.textContent = display.textContent + '6' ;}
 	})
 	siete.addEventListener('click', function(){
-		display.textContent = display.textContent + '7' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '7' ;	
+		}else{display.textContent = display.textContent + '7' ;}
 	})
 	ocho.addEventListener('click', function(){
-		display.textContent = display.textContent + '8' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '8' ;	
+		}else{display.textContent = display.textContent + '8' ;}
 	})
 	nueve.addEventListener('click', function(){
-		display.textContent = display.textContent + '9' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '9' ;	
+		}else{display.textContent = display.textContent + '9' ;}
 	})
 	cero.addEventListener('click', function(){
-		display.textContent = display.textContent + '0' ;
+		if (display.textContent == '0') {
+			borrar();
+			display.textContent = '0' ;	
+		}else{display.textContent = display.textContent + '0' ;}
 	})
 
 		
@@ -93,7 +114,8 @@ var Calculadora = function () {
 	var igual = document.getElementById('igual');
 
 	on.addEventListener('click', function(){
-		resetear();
+		borrar();
+		display.textContent = '0';
 	})
 	sign.addEventListener('click', function(){
 		//operando = display.textContent;
