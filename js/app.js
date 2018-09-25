@@ -1,5 +1,5 @@
 
-var Calculadora = function () {
+//function Calculadora() {
 
 	var uno = document.getElementById('1');
 	var dos = document.getElementById('2');
@@ -107,35 +107,6 @@ var Calculadora = function () {
 		borrar();
 	})
 
-	var on = document.getElementById('on');
-	var sign = document.getElementById('sign');
-	var raiz = document.getElementById('raiz');
-	var punto = document.getElementById('punto');
-	var igual = document.getElementById('igual');
-
-	on.addEventListener('click', function(){
-		borrar();
-		display.textContent = '0';
-	})
-	sign.addEventListener('click', function(){
-		//operando = display.textContent;
-		//operacion = '';
-		borrar();
-	})
-	raiz.addEventListener('click', function(){
-		//operando = display.textContent;
-		//operacion = '';
-		borrar();
-	})
-	punto.addEventListener('click', function(){		
-		//if () {}
-		display.textContent = display.textContent + '.' 
-	})
-	igual.addEventListener('click', function(){		
-		operador2 = display.textContent;
-		resultado();
-	})
-
 	var borrar = function(){
 		display.textContent = ' ';
 	}
@@ -163,8 +134,40 @@ var Calculadora = function () {
 				res = parseFloat(operador1) / parseFloat(operador2) ;
 				break;
 		}
-		display.textContent = res;
+		display.textContent = res;		
 	}
+
+	var on = document.getElementById('on');
+	var sign = document.getElementById('sign');
+	var raiz = document.getElementById('raiz');
+	var punto = document.getElementById('punto');
+	var igual = document.getElementById('igual');
+
+	on.addEventListener('click', function(){
+		resetear();
+		display.textContent = '0';
+	})
+	sign.addEventListener('click', function(){
+		
+		borrar();
+	})
+	raiz.addEventListener('click', function(){
+		
+		borrar();
+	})
+	punto.addEventListener('click', function(){
+;		
+		if (display.textContent.indexOf(".") == -1) {
+			display.textContent = display.textContent + '.' ;	
+		}		
+		console.log('Ya tiene punto');	
+	})
+	igual.addEventListener('click', function(){		
+		operador2 = display.textContent;
+		resultado();
+	})
+
+	
 
 
 
@@ -174,8 +177,8 @@ var Calculadora = function () {
 		
 	
 	
-};
+//};
 
-Calculadora();
+//Calculadora();
 
 
