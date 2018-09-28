@@ -395,18 +395,14 @@ function Calculadora() {
 	})
 
 	igual.addEventListener('click', function(){		
-		if (display.textContent.length <= 7) {
-			operador2 = display.textContent;
-		resultado();
-		}else{
-			borrar();
+		operador2 = display.textContent;
+		resultado();		
+
+		if (display.textContent.length >= 7) {
+			borrar()
 			display.textContent = 'ERROR';
-		}	 		
+		} 		
 	})
-
-
-
-
 	
 };
 
